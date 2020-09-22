@@ -21,14 +21,14 @@ Cache:
         saveUnreliableVersionArtifacts: true
         multiClient: false
     cache_fs:
-      cachePath: ".cache_fs"
+      cachePath: "/data/unitycache"
       cleanupOptions:
-        expireTimeSpan: "P30D"
+        expireTimeSpan: "P90D"
         maxCacheSize: 0
       persistence: true
       persistenceOptions:
         autosave: true
-        autosaveInterval: 10000
+        autosaveInterval: 60000
         throttledSaves: false
       highReliability: false
       highReliabilityOptions:
@@ -41,11 +41,11 @@ Mirror:
     queueProcessDelay: 2000
     connectionIdleTimeout: 10000
 Server:
-  port: 8126
+  port: 8081
   options:
     allowIpv6: false
 Global:
-  logLevel: 3
+  logLevel: 4
 Diagnostics:
   clientRecorder: false
   clientRecorderOptions:
